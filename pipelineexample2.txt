@@ -1,0 +1,12 @@
+pipeline{
+    agent{
+        label "linux-slave"
+    }
+    stages{
+        stage("pipeline example2"){
+            steps{
+                echo "welocome to pipeline example 2"
+            }
+        }
+    }
+}
