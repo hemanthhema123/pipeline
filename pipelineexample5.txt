@@ -1,0 +1,15 @@
+pipeline{
+    parameters {
+  choice choices: ['master', 'develop ', 'qa'], description: 'choose a branch to build', name: 'branchname'
+}
+
+
+    agent any
+    stages{
+        stage("paramsd demo"){
+            steps{
+                echo "Welcome to pparams"
+            }
+        }
+    }
+}
