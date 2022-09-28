@@ -1,0 +1,17 @@
+pipeline{
+    parameters {
+  choice choices: ['master', 'develop ', 'qa'], description: 'choose a branch to build', name: 'branchname'
+}
+
+
+    agent any
+    stages{
+        stage("paramsd demo"){
+            steps{
+                git url:"https://github.com/hemanthhema123/myapp-2022",branch: params.branchname
+                echo params.branchname
+                echo "Welcome to pparams"
+            }
+        }
+    }
+}
