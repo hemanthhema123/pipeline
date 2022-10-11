@@ -8,7 +8,7 @@ pipeline{
     stages{
         stage("paramsd demo"){
             steps{
-                echo "Welcome to pparams"
+                echo "Welcome to params"
             }
         }
     }
